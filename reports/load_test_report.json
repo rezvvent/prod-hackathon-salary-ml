@@ -1,0 +1,18 @@
+{
+  "url": "http://localhost:8000/api/v1/predict",
+  "total_requests": 200,
+  "concurrency": 10,
+  "successful_requests": 200,
+  "failed_requests": 0,
+  "total_duration_sec": 1.144,
+  "throughput_rps": 174.9,
+  "latency_ms": {
+    "mean": 56.01,
+    "min": 19.47,
+    "p50": 55.71,
+    "p90": 66.7,
+    "p95": 72.2,
+    "p99": 82.27,
+    "max": 84.35
+  }
+}

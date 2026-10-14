@@ -41,6 +41,7 @@ class VacancyItem(StrictBase):
     skills: List[str]
     salary_from: float
     salary_to: float
+    advertised_midpoint: Optional[float] = None
     similarity_score: float
 
 class FullEvaluationResponse(StrictBase):

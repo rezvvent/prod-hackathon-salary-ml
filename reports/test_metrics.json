@@ -1,49 +1,49 @@
 {
   "test_sample_size": 570,
   "point_metrics": {
-    "mae": 16130.9,
-    "rmse": 22368.4,
-    "wape": 0.0664,
-    "median_ape": 0.0552,
-    "r2": 0.9659
+    "mae": 15635.09,
+    "rmse": 21493.44,
+    "wape": 0.0644,
+    "median_ape": 0.0545,
+    "r2": 0.9685
   },
   "fork_metrics": {
-    "interval_coverage": 0.7737,
-    "mean_interval_width_rub": 49384.31,
-    "mean_relative_width": 0.2043,
+    "interval_coverage": 0.7579,
+    "mean_interval_width_rub": 47530.42,
+    "mean_relative_width": 0.1966,
     "crossing_violations_rate": 0.0,
-    "underestimation_rate": 0.0772,
-    "overestimation_rate": 0.1491
+    "underestimation_rate": 0.1,
+    "overestimation_rate": 0.1421
   },
   "pinball_loss": {
-    "q10": 3319.62,
-    "q50": 8065.45,
-    "q90": 3970.78
+    "q10": 3430.99,
+    "q50": 7817.54,
+    "q90": 3774.68
   },
   "subgroup_analysis": {
     "Более 6 лет": {
       "sample_size": 61,
-      "mae": 31184.37,
-      "wape": 0.0666,
-      "coverage": 0.7869
+      "mae": 28634.91,
+      "wape": 0.0611,
+      "coverage": 0.7541
     },
     "Нет опыта": {
       "sample_size": 121,
-      "mae": 6643.94,
-      "wape": 0.069,
-      "coverage": 0.719
+      "mae": 6282.58,
+      "wape": 0.0652,
+      "coverage": 0.7355
     },
     "От 1 года до 3 лет": {
       "sample_size": 223,
-      "mae": 14194.14,
-      "wape": 0.069,
-      "coverage": 0.7534
+      "mae": 14120.93,
+      "wape": 0.0686,
+      "coverage": 0.7444
     },
     "От 3 до 6 лет": {
       "sample_size": 165,
-      "mae": 20140.35,
-      "wape": 0.0635,
-      "coverage": 0.8364
+      "mae": 19734.01,
+      "wape": 0.0622,
+      "coverage": 0.7939
     }
   }
 }

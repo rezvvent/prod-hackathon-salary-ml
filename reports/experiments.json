@@ -14,31 +14,31 @@
     "name": "catboost_base_no_fe",
     "description": "CatBoost with raw categories and skills without engineered interaction features",
     "validation_metrics": {
-      "mae": 17030.21,
-      "rmse": 23483.69,
-      "wape": 0.0685,
-      "median_ape": 0.0574,
-      "r2": 0.9583
+      "mae": 89509.1,
+      "rmse": 113015.19,
+      "wape": 0.3601,
+      "median_ape": 0.312,
+      "r2": 0.0333
     }
   },
   {
     "name": "catboost_quantiles_with_fe",
     "description": "Production Quantile CatBoost (Q10, Q50, Q90) with full feature engineering",
     "validation_metrics": {
-      "mae": 16054.94,
-      "rmse": 22248.74,
-      "wape": 0.0646,
-      "median_ape": 0.0576,
-      "r2": 0.9625,
-      "interval_coverage": 0.7826,
-      "mean_interval_width_rub": 51471.79,
-      "mean_relative_width": 0.207,
+      "mae": 15891.24,
+      "rmse": 21807.4,
+      "wape": 0.0639,
+      "median_ape": 0.0524,
+      "r2": 0.964,
+      "interval_coverage": 0.767,
+      "mean_interval_width_rub": 49696.28,
+      "mean_relative_width": 0.1984,
       "crossing_violations_rate": 0.0,
-      "underestimation_rate": 0.1043,
-      "overestimation_rate": 0.113,
-      "pinball_loss_q10": 3470.61,
-      "pinball_loss_q50": 8027.47,
-      "pinball_loss_q90": 3656.69
+      "underestimation_rate": 0.127,
+      "overestimation_rate": 0.1061,
+      "pinball_loss_q10": 3545.79,
+      "pinball_loss_q50": 7945.62,
+      "pinball_loss_q90": 3807.28
     }
   }
 ]

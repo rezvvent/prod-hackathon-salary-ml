@@ -1,0 +1,18 @@
+{
+  "benchmark_samples": 200,
+  "native_catboost": {
+    "mean_latency_ms": 0.947,
+    "p50_latency_ms": 0.913,
+    "p95_latency_ms": 1.112,
+    "p99_latency_ms": 1.263,
+    "throughput_req_per_sec": 1056.2
+  },
+  "onnx_runtime": {
+    "mean_latency_ms": 0.156,
+    "p50_latency_ms": 0.037,
+    "p95_latency_ms": 0.572,
+    "p99_latency_ms": 1.314,
+    "throughput_req_per_sec": 6414.5
+  },
+  "speedup_factor": 6.07
+}

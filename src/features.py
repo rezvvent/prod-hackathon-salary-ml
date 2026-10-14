@@ -49,17 +49,17 @@ def build_features(records, engineered=True, include_raw_strings=False):
             col_name = "city_" + re.sub(r"[^a-zA-Z0-9а-яА-Я]+", "_", normalize_text(std_city))[:15].strip("_")
             row[col_name] = float(normalize_text(std_city) in city)
 
-        # Experience ordinal & approximate months
-        ord_idx, months = EXP_MAP.get(exp_raw, (1, 24))
-        row["experience_ord"] = float(ord_idx)
-        row["experience_months"] = float(months)
-
         # Multi-hot encoded tech skills
         for s in TECH_SKILLS[:30]:
             col_name = "skill_" + re.sub(r"[^a-zA-Z0-9а-яА-Я]+", "_", s).strip("_")
             row[col_name] = float(any(s in user_s for user_s in normalized_skills))
 
         if engineered:
+            # Experience ordinal & approximate months
+            ord_idx, months = EXP_MAP.get(exp_raw, (1, 24))
+            row["experience_ord"] = float(ord_idx)
+            row["experience_months"] = float(months)
+
             # Regional cost of living / salary index
             city_found = False
             for c_name, mult in CITY_SALARY_MULTIPLIERS.items():
