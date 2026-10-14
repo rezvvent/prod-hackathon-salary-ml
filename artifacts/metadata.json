@@ -1,0 +1,111 @@
+{
+  "model_version": "v1.0.0",
+  "git_commit": "git_commit_unknown",
+  "clean_data_sha256": "71bc70064088eb32f28ecf85022d9ab7fc04baf0d462c675dff051fd97e1aada",
+  "split_sha256": "7244521903155d88dfbe7da5b2840f7751048ad7cb596434dcf085f5cbb54db5",
+  "features": [
+    "role",
+    "city",
+    "experience",
+    "skill_python",
+    "skill_sql",
+    "skill_docker",
+    "skill_git",
+    "skill_linux",
+    "skill_postgresql",
+    "skill_fastapi",
+    "skill_django",
+    "skill_redis",
+    "skill_kubernetes",
+    "skill_ci/cd",
+    "skill_rest api",
+    "skill_pandas",
+    "skill_scikit-learn",
+    "skill_pytorch",
+    "skill_spark",
+    "skill_airflow",
+    "skill_clickhouse",
+    "skill_react",
+    "skill_typescript",
+    "skill_javascript",
+    "skill_go",
+    "skill_java",
+    "skill_kafka",
+    "skill_microservices",
+    "skill_mongodb",
+    "skill_rabbitmq",
+    "skill_aws",
+    "skill_pytest",
+    "skill_grpc",
+    "experience_ord",
+    "experience_months",
+    "city_salary_index",
+    "skill_count",
+    "has_devops",
+    "has_ml",
+    "has_backend",
+    "has_cloud"
+  ],
+  "categorical_features": [
+    "role",
+    "city",
+    "experience"
+  ],
+  "quantiles": [
+    0.1,
+    0.5,
+    0.9
+  ],
+  "models": {
+    "model_q10.cbm": "1e6ac361ad1d405ad58b77691cc634a6a54f63a8ed3a5047aecc80251f6f3c43",
+    "model_q50.cbm": "b80bf5748e833f33e761ea5e96f2bb11ccb21bf0ca76556fd8558b3aeec229d0",
+    "model_q90.cbm": "8b9fb36154722b555ca12556867f6d5a1a29422fb166052696071ebf151b0853"
+  },
+  "validation_results": {
+    "mae": 16054.94,
+    "rmse": 22248.74,
+    "wape": 0.0646,
+    "median_ape": 0.0576,
+    "r2": 0.9625,
+    "interval_coverage": 0.7826,
+    "mean_interval_width_rub": 51471.79,
+    "mean_relative_width": 0.207,
+    "crossing_violations_rate": 0.0,
+    "underestimation_rate": 0.1043,
+    "overestimation_rate": 0.113,
+    "pinball_loss_q10": 3470.61,
+    "pinball_loss_q50": 8027.47,
+    "pinball_loss_q90": 3656.69
+  },
+  "support_vocabularies": {
+    "roles": [
+      "Backend разработчик",
+      "Data Engineer",
+      "Data Scientist / ML Engineer",
+      "DevOps / SRE инженер",
+      "Frontend разработчик",
+      "Java разработчик",
+      "Mobile разработчик",
+      "Python разработчик",
+      "QA Automation инженер",
+      "Аналитик данных",
+      "Менеджер продукта",
+      "Системный аналитик"
+    ],
+    "cities": [
+      "Екатеринбург",
+      "Казань",
+      "Москва",
+      "Нижний Новгород",
+      "Новосибирск",
+      "Санкт-Петербург",
+      "Удаленная работа (РФ)"
+    ],
+    "experience": [
+      "Более 6 лет",
+      "Нет опыта",
+      "От 1 года до 3 лет",
+      "От 3 до 6 лет"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+stages:
+  data_generation:
+    cmd: python -m src.data_generator
+    deps:
+      - src/data_generator.py
+      - src/config.py
+    outs:
+      - data/raw/hh_vacancies.jsonlines
+
+  cleaning_and_split:
+    cmd: python -m src.data_loader
+    deps:
+      - data/raw/hh_vacancies.jsonlines
+      - src/data_loader.py
+    outs:
+      - data/processed/salary_clean.jsonl
+      - data/processed/split_indices.json
+      - reports/data_quality.json
+
+  eda:
+    cmd: python -m src.eda
+    deps:
+      - data/processed/salary_clean.jsonl
+      - src/eda.py
+    outs:
+      - reports/eda.png
+      - reports/hypotheses.json
+
+  train:
+    cmd: python -m src.train
+    deps:
+      - data/processed/salary_clean.jsonl
+      - data/processed/split_indices.json
+      - src/train.py
+      - src/features.py
+      - src/metrics.py
+    outs:
+      - artifacts/model_q10.cbm
+      - artifacts/model_q50.cbm
+      - artifacts/model_q90.cbm
+      - artifacts/metadata.json
+      - artifacts/vacancies_index.jsonl
+      - reports/experiments.json
+      - reports/feature_importance.png
+
+  evaluate:
+    cmd: python -m src.evaluate
+    deps:
+      - artifacts/model_q10.cbm
+      - artifacts/model_q50.cbm
+      - artifacts/model_q90.cbm
+      - data/processed/split_indices.json
+      - src/evaluate.py
+    outs:
+      - reports/test_metrics.json
+
+  onnx_export:
+    cmd: python -m src.onnx_export
+    deps:
+      - artifacts/model_q10.cbm
+      - artifacts/model_q50.cbm
+      - artifacts/model_q90.cbm
+      - src/onnx_export.py
+    outs:
+      - artifacts/model_q10.onnx
+      - artifacts/model_q50.onnx
+      - artifacts/model_q90.onnx
+      - reports/onnx_benchmark.json

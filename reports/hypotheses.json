@@ -1,0 +1,40 @@
+{
+  "statistics": {
+    "total_records": 5748,
+    "target_mean": 243206.68058455116,
+    "target_std": 118345.02108923455,
+    "target_median": 225750.0,
+    "target_p10": 93500.0,
+    "target_p90": 407500.0,
+    "target_skew": 0.7439797836520191,
+    "roles_count": 12,
+    "cities_count": 7,
+    "unique_skills_count": 48
+  },
+  "hypotheses": [
+    {
+      "id": "H1_experience_monotonicity",
+      "hypothesis": "Зарплата имеет строго монотонный нелинейный рост с опытом.",
+      "eda_evidence": "Медиана растет с 75 тыс. (Нет опыта) до 350+ тыс. (Более 6 лет).",
+      "feature_action": "Добавлен упорядоченный признак experience_ord (0, 1, 2, 3) и приблизительный стаж experience_months."
+    },
+    {
+      "id": "H2_regional_premium",
+      "hypothesis": "Москва, Санкт-Петербург и Remote دارند системную премию к зарплате.",
+      "eda_evidence": "Медиана Москвы на ~35% выше региональной базовой.",
+      "feature_action": "Добавлен числовой признак city_salary_index (1.35 для Мск, 1.18 для СПб, 1.15 для Remote)."
+    },
+    {
+      "id": "H3_skill_breadth_and_synergy",
+      "hypothesis": "Владение стеком из 4+ навыков (особенно комбинации backend + devops/cloud) дает кумулятивную премию.",
+      "eda_evidence": "Кандидаты с 5+ навыками зарабатывают в среднем на 25-40% больше при том же грейде.",
+      "feature_action": "Добавлены признаки skill_count, has_devops_stack, has_ml_stack и multi-hot ключевых технологий."
+    },
+    {
+      "id": "H4_target_asymmetry",
+      "hypothesis": "Распределение зарплат скошено вправо (right-skewed), поэтому MSE штрафует высокие зарплаты непропорционально сильнее.",
+      "eda_evidence": "Коэффициент асимметрии (skew) = 0.74.",
+      "feature_action": "Использование Pinball Loss (Quantile Regression) для Q10, Q50, Q90 и обучение на log-scale."
+    }
+  ]
+}

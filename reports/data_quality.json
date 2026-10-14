@@ -1,0 +1,16 @@
+{
+  "raw_file": "/Users/rezvent/.gemini/antigravity/scratch/hackathon_salary_case/data/raw/hh_vacancies.jsonlines",
+  "raw_sha256": "e0a00e973e7484939bc63a0e7f735afb93e84db208241a117de393e0d76c3916",
+  "raw_records_count": 6090,
+  "clean_records_count": 5748,
+  "retention_rate": 0.9438,
+  "unique_employers_groups": 349,
+  "rejected_reasons": {
+    "missing_salary": 119,
+    "foreign_currency": 47,
+    "inverted_bounds": 60,
+    "extreme_outlier_salary": 26,
+    "duplicate_id": 90,
+    "missing_key_fields": 0
+  }
+}
