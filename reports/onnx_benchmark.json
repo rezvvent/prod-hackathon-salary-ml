@@ -1,18 +1,18 @@
 {
-  "benchmark_samples": 200,
+  "benchmark_samples": 500,
   "native_catboost": {
-    "mean_latency_ms": 0.947,
-    "p50_latency_ms": 0.913,
-    "p95_latency_ms": 1.112,
-    "p99_latency_ms": 1.263,
-    "throughput_req_per_sec": 1056.2
+    "mean_latency_ms": 0.891,
+    "p50_latency_ms": 0.882,
+    "p95_latency_ms": 0.925,
+    "p99_latency_ms": 1.125,
+    "throughput_req_per_sec": 1122.6
   },
   "onnx_runtime": {
-    "mean_latency_ms": 0.156,
-    "p50_latency_ms": 0.037,
-    "p95_latency_ms": 0.572,
-    "p99_latency_ms": 1.314,
-    "throughput_req_per_sec": 6414.5
+    "mean_latency_ms": 0.016,
+    "p50_latency_ms": 0.014,
+    "p95_latency_ms": 0.017,
+    "p99_latency_ms": 0.023,
+    "throughput_req_per_sec": 62147.7
   },
-  "speedup_factor": 6.07
+  "speedup_factor": 55.36
 }

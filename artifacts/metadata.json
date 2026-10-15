@@ -1,6 +1,6 @@
 {
   "model_version": "v1.0.0",
-  "git_commit": "1ebc3a4f6d8f60e839bce5bfeb45fadf06e6ee1a",
+  "git_commit": "e3a4acc742665ccd47495a168899f1a3b570a465",
   "clean_data_sha256": "71bc70064088eb32f28ecf85022d9ab7fc04baf0d462c675dff051fd97e1aada",
   "split_sha256": "7244521903155d88dfbe7da5b2840f7751048ad7cb596434dcf085f5cbb54db5",
   "features": [
@@ -69,9 +69,9 @@
     0.9
   ],
   "models": {
-    "model_q10.cbm": "d9d4045f609ebeda1f5f9fed76bb4c3585bc140255bbc818507a8f19a237bac8",
-    "model_q50.cbm": "cb08f889e221d667b7f9bbf9cfcccfff20d6f7ad81ab825edf568a0f89625217",
-    "model_q90.cbm": "65c843e18b70debbd981f7a70fc2d99d097d860cf73a2f00065265b2a429e4f6"
+    "model_q10.cbm": "f556993104b216833f8e6e9ee689449edc6ce8ad2af4e8036ed514a62c474b9f",
+    "model_q50.cbm": "9bef03e95457be707c4d69cc700dada904551416030a609c32950543ee905ab2",
+    "model_q90.cbm": "a582de90223045def78325587f741569e2376662618712674b72a3b545f63570"
   },
   "validation_results": {
     "mae": 15891.24,
